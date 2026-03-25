@@ -1,0 +1,14 @@
+# Folder sampah/cache
+.cache/
+.npm/
+.mongodb/
+.launchpadlib/
+
+# File konfigurasi shell (Penting: Jangan di-upload karena ada history command!)
+.bash_history
+.bashrc
+.lesshst
+.profile
+
+# File log atau temporary lainnya
+*.log
