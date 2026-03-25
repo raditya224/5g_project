@@ -1,1 +1,2 @@
-# 5g_project
+# Open5GS on docker
+## Installation instructions
