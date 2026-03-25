@@ -1,0 +1,22 @@
+status: 200
+date: Tue, 24 Feb 2026 07:28:39 GMT
+server: gunicorn
+x-powered-by: Zope (www.zope.org), Python (www.python.org)
+content-security-policy: frame-ancestors 'self';
+content-type: application/json
+strict-transport-security: max-age=15552000
+vary: Accept,Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-launchpad-revision: 0cf96b78d7bf002eaf2ceebea991267c53522f61
+x-lazr-notifications: []
+x-xss-protection: 1; mode=block
+x-vcs-revision: 0cf96b78d7bf002eaf2ceebea991267c53522f61
+x-request-id: 4dbd2cdf-bffa-4e5e-9386-b7d964a2cdf9
+content-length: 1624
+-content-encoding: gzip
+content-location: https://api.launchpad.net/devel/~open5gs?name=%22latest%22&ws.op=getPPAByName
+-varied-accept: application/json
+-varied-accept-encoding: gzip, deflate
+
+{"self_link": "https://api.launchpad.net/devel/~open5gs/+archive/ubuntu/latest", "web_link": "https://launchpad.net/~open5gs/+archive/ubuntu/latest", "resource_type_link": "https://api.launchpad.net/devel/#archive", "webhooks_collection_link": "https://api.launchpad.net/devel/~open5gs/+archive/ubuntu/latest/webhooks", "owner_link": "https://api.launchpad.net/devel/~open5gs", "name": "latest", "displayname": "Open5GS - latest release", "reference": "~open5gs/ubuntu/latest", "distribution_link": "https://api.launchpad.net/devel/ubuntu", "private": false, "suppress_subscription_notifications": false, "dependencies_collection_link": "https://api.launchpad.net/devel/~open5gs/+archive/ubuntu/latest/dependencies", "description": "Open5GS is a C-language Open Source implementation of 5G Core and EPC, i.e. the core network of NR/LTE network (Release-17)", "signing_key_fingerprint": "CA542085D893C03492F35E1EACC46E8E238249B1", "require_virtualized": true, "build_debug_symbols": true, "publish_debug_symbols": true, "permit_obsolete_series_uploads": false, "authorized_size": 2048, "status": "Active", "external_dependencies": null, "metadata_overrides": null, "processors_collection_link": "https://api.launchpad.net/devel/~open5gs/+archive/ubuntu/latest/processors", "enabled_restricted_processors_collection_link": "https://api.launchpad.net/devel/~open5gs/+archive/ubuntu/latest/enabled_restricted_processors", "publishing_method": "Local", "repository_format": "Debian", "publish": true, "relative_build_score": 0, "http_etag": "\"c83f6af7570680da8fe17dcf3f06b6a42cd31bbb-e966c211ab8fbef0142b2c981a5dbcbd835d0824\""}
