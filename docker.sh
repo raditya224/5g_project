@@ -1,5 +1,8 @@
 # script otomatis untuk instalasi docker pada ubuntu 22.04
 
+# install git & curl
+apt install -y curl git
+
 # Add Docker's official GPG key :
 sudo apt update
 sudo apt install ca-certificates curl
