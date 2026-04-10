@@ -59,8 +59,10 @@ chmod +x pull_image.sh
 * **PACKAGES** : Install `curl` & `git`
 * **DOCKER** : Pastikan Docker Engine dan Compose sudah terpasang dan service-nya running.
 ---
-## **CONECTIVITTY & STORAGE**
+## **IMPLEMENTATION STRATEGY**
 
-### *FOR 4G DEPLOYMENT :*
-* *PORT*
-
+### **Step 1: Get Deployment Recipe**
+Menggunakan `deploy-all.yaml` untuk menjalankan seluruh stack (4G + 5G + IMS).
+```bash
+wget [https://raw.githubusercontent.com/herlesupreeth/docker_open5gs/master/deploy-all.yaml](https://raw.githubusercontent.com/herlesupreeth/docker_open5gs/master/deploy-all.yaml)
+wget [https://raw.githubusercontent.com/herlesupreeth/docker_open5gs/master/.env](https://raw.githubusercontent.com/herlesupreeth/docker_open5gs/master/.env)
