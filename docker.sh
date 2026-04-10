@@ -1,27 +1,24 @@
-#!/bin/bash
+# script otomatis untuk instalasi docker pada ubuntu 22.04
 
-# List of components based on SDD Spec
-COMPONENTS=(
-    "open5gs" "grafana" "metrics" "osmohlr" "osmomsc" 
-    "pyhss" "kamailio" "mysql" "opensips" "srslte" 
-    "srsran" "ueransim" "eupf" "ocs" "osmoepdg" "swu_client"
-)
+# install git & curl
+apt install -y curl git
 
-SOURCE_REGISTRY="ghcr.io/herlesupreeth"
-TAG="master"
+# Add Docker's official GPG key :
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-echo "🚀 Starting 5G Core Image Deployment..."
+# Add the repository to Apt sources :
+sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
 
-for APP in "${COMPONENTS[@]}"; do
-    IMAGE_FULL="$SOURCE_REGISTRY/docker_$APP:$TAG"
-    LOCAL_NAME="docker_$APP"
-    
-    echo "--------------------------------------------"
-    echo "📦 Processing: $APP"
-    docker pull $IMAGE_FULL
-    docker tag $IMAGE_FULL $LOCAL_NAME
-    echo "✅ Tagged $LOCAL_NAME"
-done
+sudo apt update
 
-echo "--------------------------------------------"
-echo "🎉 All images are ready for Docker Compose."
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
