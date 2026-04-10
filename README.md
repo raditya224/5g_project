@@ -62,8 +62,6 @@ chmod +x pull_image.sh
 ---
 ## **IMPLEMENTATION STRATEGY**
 
-### **Step 1: Get Deployment Recipe**
-Menggunakan `deploy-all.yaml` untuk menjalankan seluruh stack (4G + 5G + IMS).
+Menjalankan `deploy-all.yaml`seluruh stack (4G + 5G + IMS).
 ```bash
-wget [https://raw.githubusercontent.com/herlesupreeth/docker_open5gs/master/deploy-all.yaml](https://raw.githubusercontent.com/herlesupreeth/docker_open5gs/master/deploy-all.yaml)
-wget [https://raw.githubusercontent.com/herlesupreeth/docker_open5gs/master/.env](https://raw.githubusercontent.com/herlesupreeth/docker_open5gs/master/.env)
+docker compose -f deploy-all.yaml up -d
