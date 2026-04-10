@@ -42,6 +42,13 @@ Semua *image* ditarik dari registry **ghcr.io/herlesupreeth/** menggunakan tag `
 
 ---
 
+
+## INITIAL SETUP (Pre-requisites)
+* **REPOSITORY** : Ganti ke repo lokal Indonesia (misal: `Kartolo/Kambing`) untuk kecepatan akses.
+* **PACKAGES** : Install `curl` & `git`
+* **DOCKER** : Pastikan Docker Engine dan Compose sudah terpasang dan service-nya running.
+---
+
 ## **AUTOMATION PULL IMAGE**
 Untuk memastikan *environment* sesuai dengan **Spec**, jalankan skrip automasi berikut:
 
@@ -52,12 +59,6 @@ chmod +x pull_image.sh
 # Sinkronisasi spec ke lokal image
 ./pull_image.sh
 ```
----
-
-## INITIAL SETUP (Pre-requisites)
-* **REPOSITORY** : Ganti ke repo lokal Indonesia (misal: `Kartolo/Kambing`) untuk kecepatan akses.
-* **PACKAGES** : Install `curl` & `git`
-* **DOCKER** : Pastikan Docker Engine dan Compose sudah terpasang dan service-nya running.
 ---
 ## **CONECTIVITTY & STORAGE**
 
